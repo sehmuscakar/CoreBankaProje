@@ -1,0 +1,8 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@* yukarda bu projediki addtaghelpersi kullan  *@
+@*@using CoreBankaProje.Data.Entities // doğrudan entity tanımlamak heryere doğru bir hareket değil *@
+@* vewlerde artık yukardakini tanımlamak zorunda değilsin*@
+@addTagHelper CoreBankaProje.TagHelpers.*,CoreBankaProje
+@*yukarda tanımladığın taghelper klasöründeki , den sonra da hangi projede bulunuyorsa *@
+@using CoreBankaProje.Models
+@* yukarısı artık modeli de tanıyor*@

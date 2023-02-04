@@ -1,0 +1,30 @@
+﻿@*@model List<CoreBankaProje.Data.Entities.ApplicationUser> bunu yazmak istemiyorsan viewimport ekle ve oraya tanımla *@
+   @* @model List<ApplicationUser> biz burda model tanımladığımız için modeldeki propertylerdeki leri  *@
+@model List<UserLİstModel>
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="mt-4 table table-hover table-bordered table-sm">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Account Count</td>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td><getAccountCount application-user-id="@item.Id"></getAccountCount> </td>
+           <td>
+               <a asp-action="Create" asp-controller="Account" asp-route-id="@item.Id"> Create New Account</a>
+           </td>
+            </tr>
+        }
+    </tbody>
+</table>
